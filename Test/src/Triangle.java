@@ -21,27 +21,27 @@ public class Triangle {
 		this.third_side = third;
 	}
 	
-	// Setters
-	public void set_first_side(int side) {
-		this.first_side = side;
-	}
-	public void set_second_side(int side) {
-		this.second_side = side;
-	}
-	public void set_third_side(int side) {
-		this.third_side = side;
-	}
-	
-	// Getters
-	public double get_first_side() {
-		return this.first_side;
-	}
-	public double get_second_side() {
-		return this.second_side;
-	}
-	public double get_third_side() {
-		return this.third_side;
-	}
+//	// Setters
+//	public void set_first_side(int side) {
+//		this.first_side = side;
+//	}
+//	public void set_second_side(int side) {
+//		this.second_side = side;
+//	}
+//	public void set_third_side(int side) {
+//		this.third_side = side;
+//	}
+//
+//	// Getters
+//	public double get_first_side() {
+//		return this.first_side;
+//	}
+//	public double get_second_side() {
+//		return this.second_side;
+//	}
+//	public double get_third_side() {
+//		return this.third_side;
+//	}
 	
 	public void side_arrange() {
 		
@@ -100,8 +100,8 @@ public class Triangle {
 		first_triangle.rightTriangle();
 		
 		if(first_triangle.if_triangle()) {
-			System.out.println("Parameter: "+first_triangle.perimeter(first_triangle.if_triangle()));
-			System.out.println("Parameter: "+first_triangle.area(first_triangle.if_triangle()));
+			System.out.println("Perimeter: "+first_triangle.perimeter(first_triangle.if_triangle()));
+			System.out.println("Area: "+first_triangle.area(first_triangle.if_triangle()));
 		}
 	}
 }
