@@ -83,25 +83,46 @@ public class Triangle {
 		if((Math.pow(this.first_side, 2)) == (Math.pow(this.second_side, 2) + Math.pow(this.third_side, 2)) ||
 				(Math.pow(this.second_side, 2)) == (Math.pow(this.first_side, 2) + Math.pow(this.third_side, 2)) ||
 				(Math.pow(this.third_side, 2)) == (Math.pow(this.first_side, 2) + Math.pow(this.second_side, 2))){
-					System.out.println("The triangle is the Right Triangele");
+					System.out.println("The triangle is the Right Triangle");
 				}
 	}
 	
-	// rozwartokatny
-	public void trrr() {
-		if((Math.cos(this.first_side / this.second_side)) * 180 / 3.14 > 90) {
-			System.out.println();
+	// Obtuse
+	public void obtuse() {
+		int myPow = 2;
+		if(Math.pow(this.first_side, myPow) + Math.pow(this.second_side, myPow) < Math.pow(this.third_side, myPow) ||
+				Math.pow(this.second_side, myPow) + Math.pow(this.third_side, myPow) < Math.pow(this.first_side, myPow) ||
+				Math.pow(this.first_side, myPow) + Math.pow(this.third_side, myPow) < Math.pow(this.second_side, myPow)){
+			System.out.println("Yes it is obtuse!");
+		} else{
+			System.out.println("Nope, it isn't!");
 		}
 	}
 	
 	public static void main(String[] args) {
-		Triangle first_triangle = new Triangle(7, 7, 1);
+		Triangle first_triangle = new Triangle(7, 7, 4);
+		Triangle second_triangle = new Triangle(2, 3, 4);
+
+		System.out.println("The first triangle:");
 		first_triangle.side_arrange();
 		first_triangle.rightTriangle();
-		
+
 		if(first_triangle.if_triangle()) {
 			System.out.println("Perimeter: "+first_triangle.perimeter(first_triangle.if_triangle()));
 			System.out.println("Area: "+first_triangle.area(first_triangle.if_triangle()));
+			System.out.println("Is the triangle obtuse?");
+			first_triangle.obtuse();
+		}
+
+		System.out.println("\nThe second triangle:");
+		second_triangle.side_arrange();
+		second_triangle.rightTriangle();
+
+		if(second_triangle.if_triangle()) {
+			System.out.println("Perimeter: "+second_triangle.perimeter(second_triangle.if_triangle()));
+			System.out.println("Area: "+second_triangle.area(second_triangle.if_triangle()));
+			System.out.println("Is the triangle obtuse?");
+			second_triangle.obtuse();
 		}
 	}
 }

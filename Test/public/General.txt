@@ -1,0 +1,29 @@
+1. What is the capital of USA?
+a) Apocalypse peak.
+b) Bat Cave.
+c) Big Rock Candy Mountain
+d) Washington
+d
+
+2. What is the color of grass?
+a) Brown.
+b) Green.
+c) Purple.
+D) Space gray.
+b
+
+3. What is the shortest month?
+a) February
+b) May
+c) October
+d) August
+a
+
+4. What is the output of the code below
+age = 21
+age ? return "old enough" : return "Hello alcohol!";
+a) Old enough
+b) Hello alcohol!
+c) old enough
+d) Kara
+c

@@ -1,0 +1,27 @@
+1. (7 < 5) ? 5 * 3 - 10 : 2 + 6 * 1?
+a) 8
+b) 5
+c) -5
+d) inf loop
+a
+
+2. std::cout << static_cast<double>(15)/2?
+a) 8
+b) 7
+c) 7.5
+d) None of this
+c
+
+3. Which of the following using to declare a constant in PHP?
+a) constant
+b) define
+c) #pragma
+d) const
+b
+
+4. What tag constrain visible part of the page?
+a) <section>
+b) <article>
+c) <body>
+d) <script>
+c

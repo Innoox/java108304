@@ -1,0 +1,27 @@
+1. 50 times 5 is equal to?
+a) 2500
+b) 500
+c) 25
+d) None of this
+d
+
+2. Find the median of the given data: 13, 16, 12, 14, 19, 12, 14, 13, 14.
+a) 19
+b) 14
+c) 13
+d) 14.5
+b
+
+3. Simplify: {36 ÷ (-9)} ÷ {(-24) ÷ 6}
+a) -1
+b) 3
+c) 1
+d) 2
+c
+
+4. Fill in the blanks: 5/-7 = ..../35
+a) 5
+b) -25
+c) 25
+d) 30
+b
