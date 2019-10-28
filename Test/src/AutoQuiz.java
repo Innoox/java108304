@@ -1,7 +1,5 @@
-import javax.annotation.processing.SupportedSourceVersion;
 import java.io.*;
 import java.util.Scanner;
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 public class AutoQuiz {
@@ -10,6 +8,7 @@ public class AutoQuiz {
     static String[] quizVariants = {"Mathematics", "Informatics", "General", "Exit"};
     static int simpleQuizIterator = 1;
     public static void quizIntro(){
+        simpleQuizIterator = 1;
         System.out.println("Please select the Quiz:");
         System.out.println("|-------------------------------------------------");
         for (String i : quizVariants){
@@ -57,11 +56,12 @@ public class AutoQuiz {
                         System.out.println(readedFileHolder[i]);
                     }
                 }
+                System.out.println("Your result is:");
+                double totalScore = ((double) IntStream.of(score).sum() / score.length) * 100;
+                System.out.println(totalScore+"%");
+                quizIntro();
             }
         }
-        System.out.println("Your result is:");
-        double totalScore = ((double) IntStream.of(score).sum() / score.length) * 100;
-        System.out.println(totalScore+"%");
 //        numberOfChosenQuiz = myScan.nextInt();
 //        FileInputStream fileStream = new FileInputStream("Test/public/"+quizVariants[numberOfChosenQuiz - 1]+".txt");
 //        DataInputStream fileInput = new DataInputStream(fileStream);
