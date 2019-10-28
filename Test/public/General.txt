@@ -1,3 +1,5 @@
+Here you have to answer for the 4 questions
+The chosen theme is General
 1. What is the capital of USA?
 a) Apocalypse peak.
 b) Bat Cave.
@@ -9,7 +11,7 @@ d
 a) Brown.
 b) Green.
 c) Purple.
-D) Space gray.
+d) Space gray.
 b
 
 3. What is the shortest month?
@@ -19,9 +21,7 @@ c) October
 d) August
 a
 
-4. What is the output of the code below
-age = 21
-age ? return "old enough" : return "Hello alcohol!";
+4. What is the output of the code: age = 21; age ? return "old enough" : return "Hello alcohol!";
 a) Old enough
 b) Hello alcohol!
 c) old enough
