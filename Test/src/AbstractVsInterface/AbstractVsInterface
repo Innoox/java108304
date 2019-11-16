@@ -1,0 +1,11 @@
+Zastanów siê lub poszperaj w Internecie czym w³aœciwie ró¿ni siê klasa abstrakcyjna od interfejsu w kontekœcie Java?
+Podczas szukania przy okazji powtórzysz sobie za³o¿enia obu tych podejœæ i ustrukturyzujesz sobie wiedzê z tego zakresu.
+
+OdpowiedŸ:
+1. Abstract class - can have instance methods that implement default behavior.
+2. Variable in the Java interface is final by default.
+3. Members of interface are public, abstract methods encapsulation can be implemented.
+4. Interface can extend only interface meanwhile abstract can extends another classes and implement multiple interfaces.
+5. Class can implement multiple interfaces but extends only one abstract.
+6. Interface is absolutely abstract means can't be instantiated.
+7. Interfaces are slow.
