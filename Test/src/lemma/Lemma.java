@@ -24,11 +24,6 @@ package lemma;
 //Zadbaj aby klasy mia³y poprawnie zaimplementowne hashCode i equals.
 //Zaprezentuj dzia³anie takiego zestawu.
 
-
-public class Lemma {
-
-}
-
 public class Lemma {
 
 	/**

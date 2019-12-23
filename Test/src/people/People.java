@@ -3,6 +3,8 @@
  */
 package people;
 
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 
 /**
@@ -10,7 +12,7 @@ import java.util.*;
  *
  */
 
-public class People {
+public class People implements Comparable{
 
 	private String name;
 	private String surname;
@@ -50,20 +52,65 @@ public class People {
 		System.out.println("Name: " + this.getName() + ". Surname: " + this.getSurname() + ". Age: " + this.getAge());
 	}
 
+//	@Override
+//    public boolean equals(Object obj) {
+//        if (this == obj)
+//            return true;
+//        if (obj == null)
+//            return false;
+//        if (getClass() != obj.getClass())
+//            return false;
+//        People other = (People) obj;
+//        if ((name != other.name) &&
+//        		(surname != other.surname) &&
+//        		(age != other.age)) return false;
+//        return true;
+//    }
+//
+//	@Override
+//	public int compareTo(Object o) {
+//		if (this == obj)
+//			return 1;
+//		if (obj == null)
+//			return 0;
+//		if (getClass() != obj.getClass())
+//			return 0;
+//		People other = (People) obj;
+//		if ((name != other.name) &&
+//				(surname != other.surname) &&
+//				(age != other.age)) return 0;
+//		return 1;
+//	}
+
 	@Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        People other = (People) obj;
-        if ((name != other.name) &&
-        		(surname != other.surname) &&
-        		(age != other.age)) return false;
-        return true;
-    }
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof People)) return false;
+		People people = (People) o;
+		return getAge() == people.getAge() &&
+				getName().equals(people.getName()) &&
+				Objects.equals(getSurname(), people.getSurname());
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(getName(), getSurname(), getAge());
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if (this == o)
+			return 1;
+		if (o == null)
+			return 0;
+		if (getClass() != o.getClass())
+			return 0;
+		People other = (People) o;
+		if ((name != other.name) &&
+				(surname != other.surname) &&
+				(age != other.age)) return 0;
+		return 1;
+	}
 
 	/**
 	 * @param args
@@ -86,5 +133,15 @@ public class People {
 		}
 		boolean value = school.equals(school2);
 		System.out.println("Are both are equal: " + value);
+
+		// TreeSet
+		TreeSet<People> set1 = new TreeSet<>();
+		set1.add(new People("John", "Doe", 21));
+		set1.add(new People("Jane", "Doe", 43));
+		set1.add(new People("John", "Doe", 21));
+		System.out.println("TreeSet print..\n");
+		for (People tmp : set1) {
+			System.out.println("Name: " + tmp.name + ". Surname: " + tmp.surname + ". Age: " + tmp.age);
+		}
 	}
 }
