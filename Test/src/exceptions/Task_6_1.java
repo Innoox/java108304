@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Task_6_1 {
 
-    void myMethod() {
+    void myMethod() throws IOException {
         System.out.println("Some error.");
     }
 
