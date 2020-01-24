@@ -1,0 +1,51 @@
+###########################################################################
+public interface Smth {
+    public default String voice() {
+        return "Aaaaarrrrggghhhh!";
+    }
+}
+###########################################################################
+public abstract class Animal implements Smth{
+    protected int age = 3;
+    protected String name = "Animals";
+
+    Animal(int tmpAge, String tmpName) {
+        this.age = tmpAge;
+        this.name = tmpName;
+    }
+
+    public void whoIs() {
+        System.out.println(this.name);
+    }
+
+    public abstract int getAge();
+    public abstract String getName();
+}
+###########################################################################
+public class Horse extends Animal implements Smth{
+
+    Horse(int tmpHorseAge, String tmpHorseName) {
+        super(tmpHorseAge, tmpHorseName);
+    }
+
+    @Override
+    public int getAge() {
+        return super.age;
+    }
+    @Override
+    public String voice() {
+        return "Neigh!";
+    }
+    @Override
+    public String getName() {
+        return super.name;
+    }
+}
+###########################################################################
+public class Task_11{
+    public static void main(String[] args) {
+        Animal myHorse = new Horse(2, "Pablo");
+        System.out.println("The name of the horse is: "+myHorse.getName()+".\nIt's age is: "+myHorse.getAge()+".\nIt sounds like: "+myHorse.voice());
+    }
+}
+###########################################################################
