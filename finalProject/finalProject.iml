@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/commons-lang3-3.9/commons-lang3-3.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/Libraries/commons-lang3-3.9/commons-lang3-3.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
