@@ -92,32 +92,27 @@ public class FinalProject {
         for (Integer i : myResult) {
             if (i < 0) {
                 System.out.println("liczba ujemna    |"+i);
-            } else if (isPrime(i) && i > 1){
-                System.out.println("liczba pierwsza  |"+i);
             } else {
-                System.out.println("liczba dodatnia  |"+i);
+                if (isPrime(i)) {
+                    System.out.println("liczba pierwsza    |"+i);
+                } else {
+                    System.out.println("liczba dodatnia    |"+i);
+                }
             }
             //System.out.println(i);
         }
     }
 
     public static boolean isPrime(Integer tmpVar) {
-        int tmpVarCheck = 0;
         boolean flag = false;
-        tmpVarCheck = tmpVar / 2;
-        if (tmpVar == 0 || tmpVar == 1) {
-            return false;
-        } else {
-            for (int i = 2; i < tmpVarCheck; ++i) {
-                if (tmpVar % i == 0) {
-                    flag = true;
-                    break;
-                }
+        for(int i = 2; i <= tmpVar/2; ++i)
+        {
+            if(tmpVar % i == 0)
+            {
+                flag = true;
+                break;
             }
         }
-        if (flag) {
-            return true;
-        }
-        return false;
+        return !flag;
     }
 }
