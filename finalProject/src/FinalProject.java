@@ -93,9 +93,9 @@ public class FinalProject {
             if (i < 0) {
                 System.out.println("liczba ujemna    |"+i);
             } else if (isPrime(i) && i > 1){
-                System.out.println("liczba pierwsza  |"+i);
-            } else {
                 System.out.println("liczba dodatnia  |"+i);
+            } else {
+                System.out.println("liczba pierwsza  |"+i);
             }
             //System.out.println(i);
         }
