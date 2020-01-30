@@ -60,8 +60,12 @@ public class FinalProject {
         for (String tmp : result) {
             if (tmp.startsWith("-")){
                 tmp = tmp.replaceAll("-", "");
-                myResultContainer = -Integer.parseInt(tmp);
-                myResult.add(myResultContainer);
+                if (StringUtils.isNumeric(tmp)){
+                    myResultContainer = -Integer.parseInt(tmp);
+                    myResult.add(myResultContainer);
+                }
+//                myResultContainer = -Integer.parseInt(tmp);
+//                myResult.add(myResultContainer);
                 //System.out.println(myResultContainer);
             } else {
                 if (StringUtils.isNumeric(tmp)){
